@@ -13,7 +13,48 @@
 		DD09D6CA2C7BBC1600F0E67B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DD09D6C92C7BBC1600F0E67B /* Base */; };
 		DD09D6CC2C7BBC1700F0E67B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD09D6CB2C7BBC1700F0E67B /* Assets.xcassets */; };
 		DD09D6CF2C7BBC1700F0E67B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DD09D6CE2C7BBC1700F0E67B /* Base */; };
+		DD09D6D72C7BC66300F0E67B /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD09D6D62C7BC66300F0E67B /* CustomTabBarController.swift */; };
+		DD09D6DC2C7CB0C300F0E67B /* TabBarWithCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD09D6DB2C7CB0C300F0E67B /* TabBarWithCorners.swift */; };
+		DD65F00E2C8115CF006B0874 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65F00D2C8115CF006B0874 /* CircularTransition.swift */; };
+		DD65F0102C818FFF006B0874 /* WeekDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65F00F2C818FFF006B0874 /* WeekDetailViewController.swift */; };
+		DD6C5D932C809E6600AE65B5 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD6C5D8F2C809E6600AE65B5 /* Montserrat-VariableFont_wght.ttf */; };
+		DD6C5D942C809E6600AE65B5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C5D912C809E6600AE65B5 /* Fonts.swift */; };
+		DD6C5D962C809F5300AE65B5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C5D952C809F5300AE65B5 /* Helper.swift */; };
+		DD6C5DAC2C80C01000AE65B5 /* TrainingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C5DAA2C80C01000AE65B5 /* TrainingModels.swift */; };
+		DD6C5DAE2C80C0AC00AE65B5 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C5DAD2C80C0AC00AE65B5 /* Setup.swift */; };
+		DD6C5DB62C80C50D00AE65B5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DD6C5DB52C80C50D00AE65B5 /* RealmSwift */; };
+		DD6C5DB72C80C55800AE65B5 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = DD6C5DB52C80C50D00AE65B5 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		DD6C5DBB2C80C57700AE65B5 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DD6C5DBA2C80C57700AE65B5 /* ReSwift */; };
+		DD6C5DC02C80C87900AE65B5 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C5DBC2C80C87900AE65B5 /* Actions.swift */; };
+		DD6C5DC12C80C87900AE65B5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C5DBD2C80C87900AE65B5 /* AppState.swift */; };
+		DD6C5DC22C80C87900AE65B5 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C5DBE2C80C87900AE65B5 /* Reducers.swift */; };
+		DD9669FC2C81EE430098F968 /* DayCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9669FB2C81EE430098F968 /* DayCustomCell.swift */; };
+		DD9669FE2C81EEF40098F968 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9669FD2C81EEF40098F968 /* RoundedCorner.swift */; };
+		DD966A002C81F0450098F968 /* DaysProgramCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9669FF2C81F0440098F968 /* DaysProgramCollectionController.swift */; };
+		DDD4BEC32C80FB6200061476 /* BottomHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4BEC22C80FB6200061476 /* BottomHomeViewController.swift */; };
+		DDD4BEC62C80FE8100061476 /* WeekCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4BEC52C80FE8100061476 /* WeekCustomCell.swift */; };
+		DDD4BEC82C8102D900061476 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4BEC72C8102D900061476 /* PagingCollectionViewLayout.swift */; };
+		DDD7BDFE2C7E0F1800F84DC5 /* SlideExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BDFD2C7E0F1800F84DC5 /* SlideExtension.swift */; };
+		DDD7BE002C7E1B7400F84DC5 /* GradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension.swift */; };
+		DDD7BE022C7E5FB800F84DC5 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BE012C7E5FB800F84DC5 /* Shadow.swift */; };
+		DDD7BE072C7E6EFB00F84DC5 /* RoundedGradienView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BE062C7E6EFB00F84DC5 /* RoundedGradienView.swift */; };
+		DDD7BE092C7E710000F84DC5 /* TopHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BE082C7E710000F84DC5 /* TopHomeViewController.swift */; };
+		DDD7BE0B2C7EE6BD00F84DC5 /* MultiStrokeCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BE0A2C7EE6BD00F84DC5 /* MultiStrokeCircle.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DD6C5DB82C80C55800AE65B5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DD6C5DB72C80C55800AE65B5 /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DD09D6BF2C7BBC1600F0E67B /* StepRunningCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepRunningCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +65,30 @@
 		DD09D6CB2C7BBC1700F0E67B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD09D6CE2C7BBC1700F0E67B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD09D6D02C7BBC1700F0E67B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD09D6D62C7BC66300F0E67B /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		DD09D6DB2C7CB0C300F0E67B /* TabBarWithCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWithCorners.swift; sourceTree = "<group>"; };
+		DD65F00D2C8115CF006B0874 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
+		DD65F00F2C818FFF006B0874 /* WeekDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDetailViewController.swift; sourceTree = "<group>"; };
+		DD6C5D8F2C809E6600AE65B5 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		DD6C5D912C809E6600AE65B5 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		DD6C5D952C809F5300AE65B5 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		DD6C5DAA2C80C01000AE65B5 /* TrainingModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingModels.swift; sourceTree = "<group>"; };
+		DD6C5DAD2C80C0AC00AE65B5 /* Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
+		DD6C5DBC2C80C87900AE65B5 /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		DD6C5DBD2C80C87900AE65B5 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		DD6C5DBE2C80C87900AE65B5 /* Reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
+		DD9669FB2C81EE430098F968 /* DayCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCustomCell.swift; sourceTree = "<group>"; };
+		DD9669FD2C81EEF40098F968 /* RoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		DD9669FF2C81F0440098F968 /* DaysProgramCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysProgramCollectionController.swift; sourceTree = "<group>"; };
+		DDD4BEC22C80FB6200061476 /* BottomHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomHomeViewController.swift; sourceTree = "<group>"; };
+		DDD4BEC52C80FE8100061476 /* WeekCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCustomCell.swift; sourceTree = "<group>"; };
+		DDD4BEC72C8102D900061476 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
+		DDD7BDFD2C7E0F1800F84DC5 /* SlideExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideExtension.swift; sourceTree = "<group>"; };
+		DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtension.swift; sourceTree = "<group>"; };
+		DDD7BE012C7E5FB800F84DC5 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
+		DDD7BE062C7E6EFB00F84DC5 /* RoundedGradienView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedGradienView.swift; sourceTree = "<group>"; };
+		DDD7BE082C7E710000F84DC5 /* TopHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHomeViewController.swift; sourceTree = "<group>"; };
+		DDD7BE0A2C7EE6BD00F84DC5 /* MultiStrokeCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiStrokeCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6C5DB62C80C50D00AE65B5 /* RealmSwift in Frameworks */,
+				DD6C5DBB2C80C57700AE65B5 /* ReSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +123,119 @@
 		DD09D6C12C7BBC1600F0E67B /* StepRunningCoach */ = {
 			isa = PBXGroup;
 			children = (
+				DD6C5D922C809E6600AE65B5 /* Constants */,
+				DD6C5D902C809E6600AE65B5 /* Fonts */,
+				DD6C5D972C809FBD00AE65B5 /* Utils */,
+				DD6C5DAB2C80C01000AE65B5 /* Models */,
+				DD6C5DBF2C80C87900AE65B5 /* Store */,
+				DDD4BEC42C80FE5D00061476 /* Cells */,
 				DD09D6C22C7BBC1600F0E67B /* AppDelegate.swift */,
 				DD09D6C42C7BBC1600F0E67B /* SceneDelegate.swift */,
 				DD09D6C62C7BBC1600F0E67B /* ViewController.swift */,
+				DDD7BE082C7E710000F84DC5 /* TopHomeViewController.swift */,
+				DDD4BEC22C80FB6200061476 /* BottomHomeViewController.swift */,
+				DD65F00F2C818FFF006B0874 /* WeekDetailViewController.swift */,
+				DD9669FF2C81F0440098F968 /* DaysProgramCollectionController.swift */,
 				DD09D6C82C7BBC1600F0E67B /* Main.storyboard */,
 				DD09D6CB2C7BBC1700F0E67B /* Assets.xcassets */,
 				DD09D6CD2C7BBC1700F0E67B /* LaunchScreen.storyboard */,
 				DD09D6D02C7BBC1700F0E67B /* Info.plist */,
+				DDD7BE042C7E657000F84DC5 /* CustomController */,
+				DDD7BE032C7E654C00F84DC5 /* Extension */,
 			);
 			path = StepRunningCoach;
+			sourceTree = "<group>";
+		};
+		DD65F00C2C81158F006B0874 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				DD65F00D2C8115CF006B0874 /* CircularTransition.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		DD6C5D902C809E6600AE65B5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DD6C5D8F2C809E6600AE65B5 /* Montserrat-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DD6C5D922C809E6600AE65B5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DD6C5D912C809E6600AE65B5 /* Fonts.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DD6C5D972C809FBD00AE65B5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DD6C5D952C809F5300AE65B5 /* Helper.swift */,
+				DDD4BEC72C8102D900061476 /* PagingCollectionViewLayout.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DD6C5DAB2C80C01000AE65B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD6C5DAA2C80C01000AE65B5 /* TrainingModels.swift */,
+				DD6C5DAD2C80C0AC00AE65B5 /* Setup.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD6C5DBF2C80C87900AE65B5 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				DD6C5DBC2C80C87900AE65B5 /* Actions.swift */,
+				DD6C5DBD2C80C87900AE65B5 /* AppState.swift */,
+				DD6C5DBE2C80C87900AE65B5 /* Reducers.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		DDD4BEC42C80FE5D00061476 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DD9669FB2C81EE430098F968 /* DayCustomCell.swift */,
+				DDD4BEC52C80FE8100061476 /* WeekCustomCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DDD7BE032C7E654C00F84DC5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension.swift */,
+				DD9669FD2C81EEF40098F968 /* RoundedCorner.swift */,
+				DDD7BE012C7E5FB800F84DC5 /* Shadow.swift */,
+				DDD7BDFD2C7E0F1800F84DC5 /* SlideExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DDD7BE042C7E657000F84DC5 /* CustomController */ = {
+			isa = PBXGroup;
+			children = (
+				DD65F00C2C81158F006B0874 /* Transition */,
+				DDD7BE052C7E658900F84DC5 /* TabBarController */,
+				DDD7BE062C7E6EFB00F84DC5 /* RoundedGradienView.swift */,
+				DDD7BE0A2C7EE6BD00F84DC5 /* MultiStrokeCircle.swift */,
+			);
+			path = CustomController;
+			sourceTree = "<group>";
+		};
+		DDD7BE052C7E658900F84DC5 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				DD09D6DB2C7CB0C300F0E67B /* TabBarWithCorners.swift */,
+				DD09D6D62C7BC66300F0E67B /* CustomTabBarController.swift */,
+			);
+			path = TabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,12 +248,17 @@
 				DD09D6BB2C7BBC1600F0E67B /* Sources */,
 				DD09D6BC2C7BBC1600F0E67B /* Frameworks */,
 				DD09D6BD2C7BBC1600F0E67B /* Resources */,
+				DD6C5DB82C80C55800AE65B5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = StepRunningCoach;
+			packageProductDependencies = (
+				DD6C5DB52C80C50D00AE65B5 /* RealmSwift */,
+				DD6C5DBA2C80C57700AE65B5 /* ReSwift */,
+			);
 			productName = StepRunningCoach;
 			productReference = DD09D6BF2C7BBC1600F0E67B /* StepRunningCoach.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +287,10 @@
 				Base,
 			);
 			mainGroup = DD09D6B62C7BBC1600F0E67B;
+			packageReferences = (
+				DD6C5DB42C80C50D00AE65B5 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				DD6C5DB92C80C57700AE65B5 /* XCRemoteSwiftPackageReference "ReSwift" */,
+			);
 			productRefGroup = DD09D6C02C7BBC1600F0E67B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6C5D932C809E6600AE65B5 /* Montserrat-VariableFont_wght.ttf in Resources */,
 				DD09D6CC2C7BBC1700F0E67B /* Assets.xcassets in Resources */,
 				DD09D6CF2C7BBC1700F0E67B /* Base in Resources */,
 				DD09D6CA2C7BBC1600F0E67B /* Base in Resources */,
@@ -138,9 +319,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD7BE072C7E6EFB00F84DC5 /* RoundedGradienView.swift in Sources */,
+				DD65F00E2C8115CF006B0874 /* CircularTransition.swift in Sources */,
+				DD9669FE2C81EEF40098F968 /* RoundedCorner.swift in Sources */,
+				DDD7BE022C7E5FB800F84DC5 /* Shadow.swift in Sources */,
+				DDD4BEC62C80FE8100061476 /* WeekCustomCell.swift in Sources */,
 				DD09D6C72C7BBC1600F0E67B /* ViewController.swift in Sources */,
+				DD09D6DC2C7CB0C300F0E67B /* TabBarWithCorners.swift in Sources */,
+				DD6C5D942C809E6600AE65B5 /* Fonts.swift in Sources */,
+				DDD7BE0B2C7EE6BD00F84DC5 /* MultiStrokeCircle.swift in Sources */,
+				DD6C5DC22C80C87900AE65B5 /* Reducers.swift in Sources */,
+				DD6C5DC12C80C87900AE65B5 /* AppState.swift in Sources */,
 				DD09D6C32C7BBC1600F0E67B /* AppDelegate.swift in Sources */,
+				DDD4BEC32C80FB6200061476 /* BottomHomeViewController.swift in Sources */,
+				DDD7BE092C7E710000F84DC5 /* TopHomeViewController.swift in Sources */,
+				DD09D6D72C7BC66300F0E67B /* CustomTabBarController.swift in Sources */,
+				DD966A002C81F0450098F968 /* DaysProgramCollectionController.swift in Sources */,
+				DD6C5DC02C80C87900AE65B5 /* Actions.swift in Sources */,
+				DDD4BEC82C8102D900061476 /* PagingCollectionViewLayout.swift in Sources */,
+				DD65F0102C818FFF006B0874 /* WeekDetailViewController.swift in Sources */,
+				DDD7BE002C7E1B7400F84DC5 /* GradientExtension.swift in Sources */,
+				DD6C5D962C809F5300AE65B5 /* Helper.swift in Sources */,
 				DD09D6C52C7BBC1600F0E67B /* SceneDelegate.swift in Sources */,
+				DDD7BDFE2C7E0F1800F84DC5 /* SlideExtension.swift in Sources */,
+				DD6C5DAE2C80C0AC00AE65B5 /* Setup.swift in Sources */,
+				DD6C5DAC2C80C01000AE65B5 /* TrainingModels.swift in Sources */,
+				DD9669FC2C81EE430098F968 /* DayCustomCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,16 +494,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZBG76PH7D9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StepRunningCoach/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SRCoach;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +514,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nadjem.StepRunningCoach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,16 +529,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZBG76PH7D9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StepRunningCoach/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SRCoach;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +549,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nadjem.StepRunningCoach;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +581,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD6C5DB42C80C50D00AE65B5 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.53.0;
+			};
+		};
+		DD6C5DB92C80C57700AE65B5 /* XCRemoteSwiftPackageReference "ReSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReSwift/ReSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD6C5DB52C80C50D00AE65B5 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD6C5DB42C80C50D00AE65B5 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		DD6C5DBA2C80C57700AE65B5 /* ReSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD6C5DB92C80C57700AE65B5 /* XCRemoteSwiftPackageReference "ReSwift" */;
+			productName = ReSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DD09D6B72C7BBC1600F0E67B /* Project object */;
 }

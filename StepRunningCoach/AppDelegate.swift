@@ -6,14 +6,33 @@
 //
 
 import UIKit
+import ReSwift
+import RealmSwift
+
+let mainStore = Store<AppState>(reducer: appReducer, state: nil)
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
 
-
+    override init() {
+        super.init()
+        UIFont.overrideInitialize()
+    }
+    
+    func migrateRealm() {
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: 2)
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let tabBarController = CustomTabBarController()
+        self.window?.rootViewController = tabBarController
+        window?.backgroundColor = UIColor.white
+        self.window?.makeKeyAndVisible()
+        migrateRealm()
+        setupInitialData()
         return true
     }
 
