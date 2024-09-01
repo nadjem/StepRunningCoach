@@ -49,7 +49,7 @@ jobs:
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
         run: |
           # create variables
-          CERTIFICATE_PATH=$RUNNER_TEMP/DIST_CERT2.p12.p12
+          CERTIFICATE_PATH=$RUNNER_TEMP/DIST_CERT2.p12
           PP_PATH=$RUNNER_TEMP/PROVISIONING_PROFILE.mobileprovision
           KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
 
