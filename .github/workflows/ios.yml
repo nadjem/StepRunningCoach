@@ -15,8 +15,14 @@ jobs:
   build:
     name: Build and Test default scheme using any available iPhone simulator
     runs-on: macos-latest
-
     steps:
+      - name: Check if secrets exist
+        env:
+          secret_key1: ${{ secrets.MY_SECRET_1 }}
+          secret_key2: ${{ secrets.MY_SECRET_2 }}
+          secret_key3: ${{ secrets.MY_SECRET_3 }}
+        if: env.secret_key1 == '' || env.secret_key2 == '' || env.secret_key3 == ''
+        run: exit 1
       - name: Clean Workspace
         run: |
           rm -rf $GITHUB_WORKSPACE/* 
