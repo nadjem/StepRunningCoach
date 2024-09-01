@@ -31,6 +31,4 @@ jobs:
           p12-base64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
           mobileprovision-base64: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}
           code-signing-identity: "iOS Distribution"
-          team-id: "ZBG76PH7D9"
-          workspace-path: StepRunningCoach.xcodeproj # optional
-    
+          team-id: "ZBG76PH7D9"    
