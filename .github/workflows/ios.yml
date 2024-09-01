@@ -16,13 +16,27 @@ jobs:
     name: Build and Test default scheme using any available iPhone simulator
     runs-on: macos-latest
     steps:
-      - name: Check if secrets exist
+      - name: Check if KEYCHAIN_PASSWORD exist
         env:
-          secret_key1: ${{ secrets.MY_SECRET_1 }}
-          secret_key2: ${{ secrets.MY_SECRET_2 }}
-          secret_key3: ${{ secrets.MY_SECRET_3 }}
-        if: env.secret_key1 == '' || env.secret_key2 == '' || env.secret_key3 == ''
-        run: exit 1
+          secret_key1: ${{ secrets.KEYCHAIN_PASSWORD }}
+          secret_key2: ${{ secrets.P12_PASSWORD }}
+          secret_key3: ${{ secrets.APPSTORE_ISSUER_ID }}
+        if: env.secret_key1 == ''
+        run: echo "no KEYCHAIN_PASSWORD" && exit 1
+      - name: Check if P12_PASSWORD exist
+        env:
+          secret_key1: ${{ secrets.KEYCHAIN_PASSWORD }}
+          secret_key2: ${{ secrets.P12_PASSWORD }}
+          secret_key3: ${{ secrets.APPSTORE_ISSUER_ID }}
+        if: env.secret_key2 == ''
+        run: echo "no P12_PASSWORD" && exit 1
+      - name: Check if APPSTORE_ISSUER_ID exist
+        env:
+          secret_key1: ${{ secrets.KEYCHAIN_PASSWORD }}
+          secret_key2: ${{ secrets.P12_PASSWORD }}
+          secret_key3: ${{ secrets.APPSTORE_ISSUER_ID }}
+        if: env.secret_key3 == ''
+        run: echo "no APPSTORE_ISSUER_ID" && exit 1  
       - name: Clean Workspace
         run: |
           rm -rf $GITHUB_WORKSPACE/* 
