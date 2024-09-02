@@ -25,29 +25,20 @@ jobs:
       run: xcodebuild -version
     - name: Set up Xcode version
       run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer  
-    - uses: sparkfabrik/ios-build-action@v2.3.0
+    - name: Deploy
+    - uses: vfrascello/xcode-deploy@v1.5
       with:
-          upload-to-testflight: false
-          increment-build-number: true
-          build-pods: false
-          pods-path: "ios/Podfile"
-          configuration: Release
-          export-method: app-store
-          project-path: StepRunningCoach.xcodeproj
-          scheme: StepRunningCoach
-          output-path: build-${{ github.sha }}.ipa
-          apple-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
-          apple-key-issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
-          apple-key-content: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
-          team-id: ${{ secrets.TEAM_ID }}
-          team-name: ${{ secrets.TEAM_NAME }}
-          #match-password: ${{ secrets.MATCH_PASSWORD }}
-          #match-git-url: ${{ secrets.MATCH_GIT_URL }}
-          #match-git-basic-authorization: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
-          #match-build-type: "appstore"
-          browserstack-upload: false
-          #browserstack-username: ${{ secrets.BROWSERSTACK_USERNAME }}
-          #browserstack-access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-          #fastlane-env: stage
-          ios-app-id: com.nadjem.StepRunningCoach
+            xcode-version: '14.0'
+            configuration: 'Release'
+            scheme: 'StepRunningCoach'
+           # path-to-export-options: 'ExportOptions.plist'
+            update-build: true
+            install-pods: false
+            resolve-package-dependencies: true
+            distribution-certificate-p12: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+            distribution-certificate-password: ${{ secrets.P12_PASSWORD }}
+            app-store-provisioning-profile: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64}}
+            auth-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
+            auth-key-issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
+            auth-key-p8: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
 
