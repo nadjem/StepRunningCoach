@@ -27,7 +27,6 @@ class WeekDetailViewController: UIViewController {
         let weeks = realm.objects(TrainingWeek.self)
         if let week = weeks.first(where: { $0.name == currentWeekFromMain }) {
             currentWeek = week
-            print(currentWeek as Any)
             titleLabel.text = currentWeek?.name ?? ""
         }
         
@@ -57,7 +56,6 @@ class WeekDetailViewController: UIViewController {
 }
 extension WeekDetailViewController: StoreSubscriber {
     func newState(state: AppState) {
-        print(state.trainingState)
         let imageName = "runner_\(state.trainingState.weekIndex).png"
         bgImage.image = UIImage(named:imageName)
     }

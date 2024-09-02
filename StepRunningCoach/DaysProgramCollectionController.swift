@@ -20,6 +20,9 @@ class DayProgramViewController: UIViewController, UICollectionViewDataSource, UI
     var locationManager: CLLocationManager?
     @IBOutlet weak var daysCollectionView: UICollectionView!
 
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         daysCollectionView.delegate = self
@@ -77,20 +80,20 @@ class DayProgramViewController: UIViewController, UICollectionViewDataSource, UI
         cell.layoutSubviews()
         cell.backgroundImage.image = UIImage(named:"image_\(indexPath.item + 1).png")
         */
-    /*
-     cell.weekImage.image = UIImage(named:"image_\(currentWeekIndex + 1).png")
+    
+    // cell.weekImage.image = UIImage(named:"image_\(currentWeekIndex + 1).png")
         cell.dayLabel.text = week?.days[indexPath.item].name
         let run = week!.days[indexPath.item].run
         cell.runLabel.text = "Running \(String(describing: run)) min"
         cell.walkLabel.text = "Walking \(String(describing: week!.days[indexPath.item].walk)) min"
         cell.repeatLabel.text = "Repeat sequence \(String(describing: week!.days[indexPath.item].repeatCount)) time"
-        cell.infoTapAction = {
+       /* cell.infoTapAction = {
             // implement your logic here, e.g. call preformSegue()
             mainStore.dispatch(UpdateTrainingDay(traininDay: self.week!.days[indexPath.item]))
             //self.performSegue(withIdentifier: "showInfo", sender:self)
             
-        }
-     */
+        }*/
+     
         return cell
     }
     
@@ -98,11 +101,10 @@ class DayProgramViewController: UIViewController, UICollectionViewDataSource, UI
             if segue.identifier == "showRun" {
           
                 if let indexPaths = daysCollectionView.indexPathsForSelectedItems{
-                //    let destinationController = segue.destination as! RunViewController
-                    /*destinationController.city = cities[indexPaths[0].row]*/
+                    let destinationController = segue.destination as! RunViewController
                 //    destinationController.hidesBottomBarWhenPushed = true
                     daysCollectionView.deselectItem(at: indexPaths[0], animated: false)
-                //    destinationController.selectedDay = week!.days[indexPaths[0].item]
+                   destinationController.selectedDay = week!.days[indexPaths[0].item]
                 }
             }
         }

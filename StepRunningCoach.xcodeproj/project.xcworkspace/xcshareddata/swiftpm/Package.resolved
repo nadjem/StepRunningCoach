@@ -1,5 +1,5 @@
 {
-  "originHash" : "8b241c83b2e5332805b96e07b25e5a9b0a85d0d5119400b79b62fe79125ca0e7",
+  "originHash" : "6ed670bfc2ff977ecdec619bf7c1dca31c0957322a14863b64eb51a8bd487872",
   "pins" : [
     {
       "identity" : "realm-core",
@@ -26,6 +26,15 @@
       "state" : {
         "revision" : "cb5c3c02f652420ef413dea41e13ac5a76b6c0fd",
         "version" : "6.1.1"
+      }
+    },
+    {
+      "identity" : "rotatinglabel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/raymondjavaxx/RotatingLabel.git",
+      "state" : {
+        "revision" : "3f8aa95d431a186b02743ef65e43003567f91d58",
+        "version" : "1.1.0"
       }
     }
   ],

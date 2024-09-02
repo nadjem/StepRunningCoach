@@ -36,13 +36,13 @@ class CustomTabBarController: UITabBarController {
               })
               UIView.animate(withDuration: 0.25, animations: {
                   
-                  let moveRight = CGAffineTransform(translationX: (tabView.frame.minX - self.view.frame.minX ) , y: 0.0)
+                  let moveRight = CGAffineTransform(translationX: (tabView.frame.minX - self.view.frame.minX ) - 2.0 , y: 0.0)
                   
                   self.upperLineView.transform = moveRight
               })
               { _ in
                       UIView.animate(withDuration: 0.15, animations: {
-                          self.upperLineView.frame.size.width = (tabView.frame.size.width - self.spacing - 40) / 2
+                          self.upperLineView.frame.size.width = (tabView.frame.size.width - self.spacing - 40)
                           self.upperLineView.frame.size.height = 4
                           })
                   }
@@ -53,9 +53,9 @@ class CustomTabBarController: UITabBarController {
               }
               upperLineView = UIView(frame:
                                         CGRect(
-                                            x: subView.frame.minX - spacing,
+                                            x: subView.frame.minX - spacing - 2.0,
                                             y: tabView.frame.minY + 4.0,
-                                            width: (tabView.frame.size.width - spacing - 40) / 2,
+                                            width: (tabView.frame.size.width - spacing - 40),
                                             height: 4
                                         )
               )

@@ -28,19 +28,39 @@
 		DD6C5DC02C80C87900AE65B5 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C5DBC2C80C87900AE65B5 /* Actions.swift */; };
 		DD6C5DC12C80C87900AE65B5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C5DBD2C80C87900AE65B5 /* AppState.swift */; };
 		DD6C5DC22C80C87900AE65B5 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6C5DBE2C80C87900AE65B5 /* Reducers.swift */; };
+		DD93E8D52C83AF6E001F0754 /* StepRunningCoachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD93E8D42C83AF6E001F0754 /* StepRunningCoachTests.swift */; };
 		DD9669FC2C81EE430098F968 /* DayCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9669FB2C81EE430098F968 /* DayCustomCell.swift */; };
 		DD9669FE2C81EEF40098F968 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9669FD2C81EEF40098F968 /* RoundedCorner.swift */; };
 		DD966A002C81F0450098F968 /* DaysProgramCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9669FF2C81F0440098F968 /* DaysProgramCollectionController.swift */; };
+		DDA23A072C820FCE000BA507 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A062C820FCE000BA507 /* RunViewController.swift */; };
+		DDA23A0A2C821051000BA507 /* RotatingLabel in Frameworks */ = {isa = PBXBuildFile; productRef = DDA23A092C821051000BA507 /* RotatingLabel */; };
+		DDA23A0E2C8210A6000BA507 /* BreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A0B2C8210A6000BA507 /* BreathView.swift */; };
+		DDA23A0F2C8210A6000BA507 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A0C2C8210A6000BA507 /* CircularProgressBarView.swift */; };
+		DDA23A112C82110C000BA507 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A102C82110C000BA507 /* WorkoutManager.swift */; };
+		DDA23A132C821169000BA507 /* Blink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A122C821169000BA507 /* Blink.swift */; };
+		DDA23A152C8215A4000BA507 /* GradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A142C8215A4000BA507 /* GradientExtension.swift */; };
+		DDA23A172C82E41C000BA507 /* OHCircleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A162C82E41C000BA507 /* OHCircleSegue.swift */; };
+		DDA23A192C82EB36000BA507 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A182C82EB36000BA507 /* DismissSegue.swift */; };
 		DDD4BEC32C80FB6200061476 /* BottomHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4BEC22C80FB6200061476 /* BottomHomeViewController.swift */; };
 		DDD4BEC62C80FE8100061476 /* WeekCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4BEC52C80FE8100061476 /* WeekCustomCell.swift */; };
 		DDD4BEC82C8102D900061476 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4BEC72C8102D900061476 /* PagingCollectionViewLayout.swift */; };
 		DDD7BDFE2C7E0F1800F84DC5 /* SlideExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BDFD2C7E0F1800F84DC5 /* SlideExtension.swift */; };
-		DDD7BE002C7E1B7400F84DC5 /* GradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension.swift */; };
+		DDD7BE002C7E1B7400F84DC5 /* GradientExtension2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension2.swift */; };
 		DDD7BE022C7E5FB800F84DC5 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BE012C7E5FB800F84DC5 /* Shadow.swift */; };
 		DDD7BE072C7E6EFB00F84DC5 /* RoundedGradienView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BE062C7E6EFB00F84DC5 /* RoundedGradienView.swift */; };
 		DDD7BE092C7E710000F84DC5 /* TopHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BE082C7E710000F84DC5 /* TopHomeViewController.swift */; };
 		DDD7BE0B2C7EE6BD00F84DC5 /* MultiStrokeCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD7BE0A2C7EE6BD00F84DC5 /* MultiStrokeCircle.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD93E8D62C83AF6E001F0754 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD09D6B72C7BBC1600F0E67B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD09D6BE2C7BBC1600F0E67B;
+			remoteInfo = StepRunningCoach;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DD6C5DB82C80C55800AE65B5 /* Embed Frameworks */ = {
@@ -67,6 +87,7 @@
 		DD09D6D02C7BBC1700F0E67B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD09D6D62C7BC66300F0E67B /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		DD09D6DB2C7CB0C300F0E67B /* TabBarWithCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWithCorners.swift; sourceTree = "<group>"; };
+		DD64697D2C843A79004BA2C0 /* StepRunningCoach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StepRunningCoach.entitlements; sourceTree = "<group>"; };
 		DD65F00D2C8115CF006B0874 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		DD65F00F2C818FFF006B0874 /* WeekDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDetailViewController.swift; sourceTree = "<group>"; };
 		DD6C5D8F2C809E6600AE65B5 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -77,14 +98,24 @@
 		DD6C5DBC2C80C87900AE65B5 /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		DD6C5DBD2C80C87900AE65B5 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		DD6C5DBE2C80C87900AE65B5 /* Reducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
+		DD93E8D22C83AF6E001F0754 /* StepRunningCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StepRunningCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD93E8D42C83AF6E001F0754 /* StepRunningCoachTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepRunningCoachTests.swift; sourceTree = "<group>"; };
 		DD9669FB2C81EE430098F968 /* DayCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCustomCell.swift; sourceTree = "<group>"; };
 		DD9669FD2C81EEF40098F968 /* RoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		DD9669FF2C81F0440098F968 /* DaysProgramCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysProgramCollectionController.swift; sourceTree = "<group>"; };
+		DDA23A062C820FCE000BA507 /* RunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
+		DDA23A0B2C8210A6000BA507 /* BreathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreathView.swift; sourceTree = "<group>"; };
+		DDA23A0C2C8210A6000BA507 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
+		DDA23A102C82110C000BA507 /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		DDA23A122C821169000BA507 /* Blink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blink.swift; sourceTree = "<group>"; };
+		DDA23A142C8215A4000BA507 /* GradientExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientExtension.swift; path = "../../../interval Running/interval Running/Extension/GradientExtension.swift"; sourceTree = "<group>"; };
+		DDA23A162C82E41C000BA507 /* OHCircleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHCircleSegue.swift; sourceTree = "<group>"; };
+		DDA23A182C82EB36000BA507 /* DismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 		DDD4BEC22C80FB6200061476 /* BottomHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomHomeViewController.swift; sourceTree = "<group>"; };
 		DDD4BEC52C80FE8100061476 /* WeekCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCustomCell.swift; sourceTree = "<group>"; };
 		DDD4BEC72C8102D900061476 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
 		DDD7BDFD2C7E0F1800F84DC5 /* SlideExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideExtension.swift; sourceTree = "<group>"; };
-		DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtension.swift; sourceTree = "<group>"; };
+		DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtension2.swift; sourceTree = "<group>"; };
 		DDD7BE012C7E5FB800F84DC5 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		DDD7BE062C7E6EFB00F84DC5 /* RoundedGradienView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedGradienView.swift; sourceTree = "<group>"; };
 		DDD7BE082C7E710000F84DC5 /* TopHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHomeViewController.swift; sourceTree = "<group>"; };
@@ -96,8 +127,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA23A0A2C821051000BA507 /* RotatingLabel in Frameworks */,
 				DD6C5DB62C80C50D00AE65B5 /* RealmSwift in Frameworks */,
 				DD6C5DBB2C80C57700AE65B5 /* ReSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD93E8CF2C83AF6E001F0754 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				DD09D6C12C7BBC1600F0E67B /* StepRunningCoach */,
+				DD93E8D32C83AF6E001F0754 /* StepRunningCoachTests */,
 				DD09D6C02C7BBC1600F0E67B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				DD09D6BF2C7BBC1600F0E67B /* StepRunningCoach.app */,
+				DD93E8D22C83AF6E001F0754 /* StepRunningCoachTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,12 +164,14 @@
 		DD09D6C12C7BBC1600F0E67B /* StepRunningCoach */ = {
 			isa = PBXGroup;
 			children = (
+				DD64697D2C843A79004BA2C0 /* StepRunningCoach.entitlements */,
 				DD6C5D922C809E6600AE65B5 /* Constants */,
 				DD6C5D902C809E6600AE65B5 /* Fonts */,
 				DD6C5D972C809FBD00AE65B5 /* Utils */,
 				DD6C5DAB2C80C01000AE65B5 /* Models */,
 				DD6C5DBF2C80C87900AE65B5 /* Store */,
 				DDD4BEC42C80FE5D00061476 /* Cells */,
+				DDA23A0D2C8210A6000BA507 /* components */,
 				DD09D6C22C7BBC1600F0E67B /* AppDelegate.swift */,
 				DD09D6C42C7BBC1600F0E67B /* SceneDelegate.swift */,
 				DD09D6C62C7BBC1600F0E67B /* ViewController.swift */,
@@ -136,6 +179,7 @@
 				DDD4BEC22C80FB6200061476 /* BottomHomeViewController.swift */,
 				DD65F00F2C818FFF006B0874 /* WeekDetailViewController.swift */,
 				DD9669FF2C81F0440098F968 /* DaysProgramCollectionController.swift */,
+				DDA23A062C820FCE000BA507 /* RunViewController.swift */,
 				DD09D6C82C7BBC1600F0E67B /* Main.storyboard */,
 				DD09D6CB2C7BBC1700F0E67B /* Assets.xcassets */,
 				DD09D6CD2C7BBC1700F0E67B /* LaunchScreen.storyboard */,
@@ -150,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				DD65F00D2C8115CF006B0874 /* CircularTransition.swift */,
+				DDA23A162C82E41C000BA507 /* OHCircleSegue.swift */,
+				DDA23A182C82EB36000BA507 /* DismissSegue.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -173,6 +219,7 @@
 		DD6C5D972C809FBD00AE65B5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DDA23A102C82110C000BA507 /* WorkoutManager.swift */,
 				DD6C5D952C809F5300AE65B5 /* Helper.swift */,
 				DDD4BEC72C8102D900061476 /* PagingCollectionViewLayout.swift */,
 			);
@@ -198,6 +245,23 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		DD93E8D32C83AF6E001F0754 /* StepRunningCoachTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD93E8D42C83AF6E001F0754 /* StepRunningCoachTests.swift */,
+			);
+			path = StepRunningCoachTests;
+			sourceTree = "<group>";
+		};
+		DDA23A0D2C8210A6000BA507 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				DDA23A0B2C8210A6000BA507 /* BreathView.swift */,
+				DDA23A0C2C8210A6000BA507 /* CircularProgressBarView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		DDD4BEC42C80FE5D00061476 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,9 +274,11 @@
 		DDD7BE032C7E654C00F84DC5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension.swift */,
+				DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension2.swift */,
+				DDA23A142C8215A4000BA507 /* GradientExtension.swift */,
 				DD9669FD2C81EEF40098F968 /* RoundedCorner.swift */,
 				DDD7BE012C7E5FB800F84DC5 /* Shadow.swift */,
+				DDA23A122C821169000BA507 /* Blink.swift */,
 				DDD7BDFD2C7E0F1800F84DC5 /* SlideExtension.swift */,
 			);
 			path = Extension;
@@ -258,10 +324,29 @@
 			packageProductDependencies = (
 				DD6C5DB52C80C50D00AE65B5 /* RealmSwift */,
 				DD6C5DBA2C80C57700AE65B5 /* ReSwift */,
+				DDA23A092C821051000BA507 /* RotatingLabel */,
 			);
 			productName = StepRunningCoach;
 			productReference = DD09D6BF2C7BBC1600F0E67B /* StepRunningCoach.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DD93E8D12C83AF6E001F0754 /* StepRunningCoachTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD93E8DA2C83AF6E001F0754 /* Build configuration list for PBXNativeTarget "StepRunningCoachTests" */;
+			buildPhases = (
+				DD93E8CE2C83AF6E001F0754 /* Sources */,
+				DD93E8CF2C83AF6E001F0754 /* Frameworks */,
+				DD93E8D02C83AF6E001F0754 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD93E8D72C83AF6E001F0754 /* PBXTargetDependency */,
+			);
+			name = StepRunningCoachTests;
+			productName = StepRunningCoachTests;
+			productReference = DD93E8D22C83AF6E001F0754 /* StepRunningCoachTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -275,6 +360,10 @@
 				TargetAttributes = {
 					DD09D6BE2C7BBC1600F0E67B = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					DD93E8D12C83AF6E001F0754 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = DD09D6BE2C7BBC1600F0E67B;
 					};
 				};
 			};
@@ -290,12 +379,14 @@
 			packageReferences = (
 				DD6C5DB42C80C50D00AE65B5 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				DD6C5DB92C80C57700AE65B5 /* XCRemoteSwiftPackageReference "ReSwift" */,
+				DDA23A082C821051000BA507 /* XCRemoteSwiftPackageReference "RotatingLabel" */,
 			);
 			productRefGroup = DD09D6C02C7BBC1600F0E67B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DD09D6BE2C7BBC1600F0E67B /* StepRunningCoach */,
+				DD93E8D12C83AF6E001F0754 /* StepRunningCoachTests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,6 +400,13 @@
 				DD09D6CC2C7BBC1700F0E67B /* Assets.xcassets in Resources */,
 				DD09D6CF2C7BBC1700F0E67B /* Base in Resources */,
 				DD09D6CA2C7BBC1600F0E67B /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD93E8D02C83AF6E001F0754 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,28 +425,52 @@
 				DD09D6C72C7BBC1600F0E67B /* ViewController.swift in Sources */,
 				DD09D6DC2C7CB0C300F0E67B /* TabBarWithCorners.swift in Sources */,
 				DD6C5D942C809E6600AE65B5 /* Fonts.swift in Sources */,
+				DDA23A192C82EB36000BA507 /* DismissSegue.swift in Sources */,
 				DDD7BE0B2C7EE6BD00F84DC5 /* MultiStrokeCircle.swift in Sources */,
 				DD6C5DC22C80C87900AE65B5 /* Reducers.swift in Sources */,
+				DDA23A072C820FCE000BA507 /* RunViewController.swift in Sources */,
 				DD6C5DC12C80C87900AE65B5 /* AppState.swift in Sources */,
 				DD09D6C32C7BBC1600F0E67B /* AppDelegate.swift in Sources */,
 				DDD4BEC32C80FB6200061476 /* BottomHomeViewController.swift in Sources */,
 				DDD7BE092C7E710000F84DC5 /* TopHomeViewController.swift in Sources */,
 				DD09D6D72C7BC66300F0E67B /* CustomTabBarController.swift in Sources */,
 				DD966A002C81F0450098F968 /* DaysProgramCollectionController.swift in Sources */,
+				DDA23A112C82110C000BA507 /* WorkoutManager.swift in Sources */,
+				DDA23A0F2C8210A6000BA507 /* CircularProgressBarView.swift in Sources */,
 				DD6C5DC02C80C87900AE65B5 /* Actions.swift in Sources */,
 				DDD4BEC82C8102D900061476 /* PagingCollectionViewLayout.swift in Sources */,
 				DD65F0102C818FFF006B0874 /* WeekDetailViewController.swift in Sources */,
-				DDD7BE002C7E1B7400F84DC5 /* GradientExtension.swift in Sources */,
+				DDA23A0E2C8210A6000BA507 /* BreathView.swift in Sources */,
+				DDD7BE002C7E1B7400F84DC5 /* GradientExtension2.swift in Sources */,
 				DD6C5D962C809F5300AE65B5 /* Helper.swift in Sources */,
 				DD09D6C52C7BBC1600F0E67B /* SceneDelegate.swift in Sources */,
 				DDD7BDFE2C7E0F1800F84DC5 /* SlideExtension.swift in Sources */,
+				DDA23A132C821169000BA507 /* Blink.swift in Sources */,
+				DDA23A172C82E41C000BA507 /* OHCircleSegue.swift in Sources */,
 				DD6C5DAE2C80C0AC00AE65B5 /* Setup.swift in Sources */,
+				DDA23A152C8215A4000BA507 /* GradientExtension.swift in Sources */,
 				DD6C5DAC2C80C01000AE65B5 /* TrainingModels.swift in Sources */,
 				DD9669FC2C81EE430098F968 /* DayCustomCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD93E8CE2C83AF6E001F0754 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD93E8D52C83AF6E001F0754 /* StepRunningCoachTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD93E8D72C83AF6E001F0754 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD09D6BE2C7BBC1600F0E67B /* StepRunningCoach */;
+			targetProxy = DD93E8D62C83AF6E001F0754 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DD09D6C82C7BBC1600F0E67B /* Main.storyboard */ = {
@@ -495,6 +617,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = StepRunningCoach/StepRunningCoach.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZBG76PH7D9;
@@ -530,6 +653,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = StepRunningCoach/StepRunningCoach.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZBG76PH7D9;
@@ -559,6 +683,42 @@
 			};
 			name = Release;
 		};
+		DD93E8D82C83AF6E001F0754 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZBG76PH7D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nadjem.StepRunningCoachTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StepRunningCoach.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StepRunningCoach";
+			};
+			name = Debug;
+		};
+		DD93E8D92C83AF6E001F0754 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZBG76PH7D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nadjem.StepRunningCoachTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StepRunningCoach.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StepRunningCoach";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -576,6 +736,15 @@
 			buildConfigurations = (
 				DD09D6D42C7BBC1700F0E67B /* Debug */,
 				DD09D6D52C7BBC1700F0E67B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD93E8DA2C83AF6E001F0754 /* Build configuration list for PBXNativeTarget "StepRunningCoachTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD93E8D82C83AF6E001F0754 /* Debug */,
+				DD93E8D92C83AF6E001F0754 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -599,6 +768,14 @@
 				minimumVersion = 6.1.1;
 			};
 		};
+		DDA23A082C821051000BA507 /* XCRemoteSwiftPackageReference "RotatingLabel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raymondjavaxx/RotatingLabel.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -611,6 +788,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DD6C5DB92C80C57700AE65B5 /* XCRemoteSwiftPackageReference "ReSwift" */;
 			productName = ReSwift;
+		};
+		DDA23A092C821051000BA507 /* RotatingLabel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDA23A082C821051000BA507 /* XCRemoteSwiftPackageReference "RotatingLabel" */;
+			productName = RotatingLabel;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

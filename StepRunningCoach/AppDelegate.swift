@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UserDefaults.standard.setValue(false, forKey:"_UIConstraintBasedLayoutLogUnsatisfiable")
+        UserDefaults.standard.setValue(false, forKey:"_UIConstraintBasedLayoutDebugging")
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let tabBarController = CustomTabBarController()
         self.window?.rootViewController = tabBarController
