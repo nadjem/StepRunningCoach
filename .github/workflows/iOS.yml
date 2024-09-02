@@ -23,7 +23,7 @@ jobs:
       uses: poad/apple-provisioning-profiles-downloader@v1.0.8
       with: 
         bundle-id: 'com.nadjem.StepRunningCoach'
-        profile-type: 'IOS_APP_STORE'
+        # profile-type: 'IOS_APP_STORE'
         issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
         api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
         api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
