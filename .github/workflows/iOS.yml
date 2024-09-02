@@ -1,0 +1,37 @@
+name: "Build Test Flight"
+on:
+  push:
+    branches:
+      - build/testflight
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      
+    - name: Import code sign
+      uses: Apple-Actions/import-codesign-certs@v1
+      with:
+        p12-file-base64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+        p12-password: ${{ secrets.P12_PASSWORD }}
+    
+    - name: Download provisioning
+      uses: Apple-Actions/download-provisioning-profiles@v1
+      with:
+        bundle-id: com.nadjem.StepRunningCoach
+        issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
+        api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
+        api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+    
+    - run: ./Build
+    
+    - name: Upload to TestFlight
+      uses: Apple-Actions/upload-testflight-build@master
+      with:
+        app-path: .build/Artifacts/MyApp.ipa/MyApp.ipa
+        issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
+        api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
+        api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
