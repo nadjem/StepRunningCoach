@@ -28,7 +28,7 @@ jobs:
     - name: Deploy
       uses: vfrascello/xcode-deploy@v1.5
       with:
-            xcode-version: '14.0'
+            xcode-version: '15.2'
             configuration: 'Release'
             scheme: 'StepRunningCoach'
            # path-to-export-options: 'ExportOptions.plist'
