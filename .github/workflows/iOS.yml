@@ -18,16 +18,15 @@ jobs:
         p12-file-base64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
         p12-password: ${{ secrets.P12_PASSWORD }}
 
-    - name: 'Download Provisioning Profiles'
-      id: provisioning
-      uses: poad/apple-provisioning-profiles-downloader@v1.0.8
-      with: 
-        bundle-id: 'com.nadjem.StepRunningCoach'
-        # profile-type: 'IOS_APP_STORE'
-        issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
-        api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
-        api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
-    
+    - uses: actions/checkout@v3
+    - uses: nickwph/apple-provisioning-profile-action@v1
+      with:
+          profile-base64: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}
+    - uses: nickwph/apple-build-certificate-action@v1      
+      with:
+          certificate-base64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+          certificate-password: ${{ secrets.P12_PASSWORD }}
+          
     - run: ./Build
     
     - name: Upload to TestFlight
