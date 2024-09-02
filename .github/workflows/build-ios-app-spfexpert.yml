@@ -52,7 +52,7 @@ jobs:
           xcodebuild -scheme "StepRunningCoach" \
           -archivePath $RUNNER_TEMP/StepRunningCoach.xcarchive \
           -sdk iphoneos \
-          -configuration Debug \
+          -configuration Release \
           -destination generic/platform=iOS -allowProvisioningUpdates \
           clean archive          
 
