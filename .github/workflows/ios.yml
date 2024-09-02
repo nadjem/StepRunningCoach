@@ -17,6 +17,8 @@ jobs:
     runs-on: macos-13
     steps:
     - uses: actions/checkout@v4
+    - name: List path
+      run: ls 
     - name: Show current version of Xcode
       run: xcodebuild -version
     - name: List available Xcode versions
@@ -31,7 +33,7 @@ jobs:
             xcode-version: '15.2'
             configuration: 'Release'
             scheme: 'StepRunningCoach'
-           # path-to-export-options: 'ExportOptions.plist'
+            path-to-export-options: 'ExportOptions.plist'
             update-build: true
             install-pods: false
             resolve-package-dependencies: true
