@@ -27,7 +27,7 @@ jobs:
       run: xcodebuild -version
     - name: Set up Xcode version
       run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer  
-    - uses: sparkfabrik/ios-build-action@v2.3.0
+    - uses: nadjem/ios-build-action@v2.3.0
       with:
         upload-to-testflight: true
         increment-build-number: true
