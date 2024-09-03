@@ -44,7 +44,7 @@ jobs:
           team-id: ${{ secrets.TEAM_ID }}
 
       - name:  Log    
-        if: faillure()
+        if: always()
         run: echo "/Users/runner/Library/Logs/gym/StepRunningCoach-StepRunningCoach.log"
         
       - name: Saving IPA File
