@@ -37,7 +37,7 @@ jobs:
           project-path: StepRunningCoach.xcodeproj
           scheme: StepRunningCoach
           configuration: Release
-          export-method: app-store
+          export-options: ./Support/ExportOptions.plist
           p12-base64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
           mobileprovision-base64: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}
           code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
