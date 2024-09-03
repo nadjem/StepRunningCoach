@@ -29,7 +29,7 @@ jobs:
 
       - name: Build and Archive
         run: |
-          xcodebuild -workspace StepRunningCoach.xcodeproj \
+          xcodebuild -project StepRunningCoach.xcodeproj \
             -scheme StepRunningCoach \
             -sdk iphoneos \
             -configuration Release \
