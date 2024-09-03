@@ -179,6 +179,7 @@
 				DDD4BEC22C80FB6200061476 /* BottomHomeViewController.swift */,
 				DD65F00F2C818FFF006B0874 /* WeekDetailViewController.swift */,
 				DD9669FF2C81F0440098F968 /* DaysProgramCollectionController.swift */,
+				DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension2.swift */,
 				DDA23A062C820FCE000BA507 /* RunViewController.swift */,
 				DD09D6C82C7BBC1600F0E67B /* Main.storyboard */,
 				DD09D6CB2C7BBC1700F0E67B /* Assets.xcassets */,
@@ -274,7 +275,6 @@
 		DDD7BE032C7E654C00F84DC5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension2.swift */,
 				DDA23A142C8215A4000BA507 /* GradientExtension.swift */,
 				DD9669FD2C81EEF40098F968 /* RoundedCorner.swift */,
 				DDD7BE012C7E5FB800F84DC5 /* Shadow.swift */,
