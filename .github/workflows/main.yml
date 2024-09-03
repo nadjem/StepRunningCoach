@@ -34,6 +34,20 @@ jobs:
         run: |
           xcodebuild -resolvePackageDependencies -project StepRunningCoach.xcodeproj
 
+      - name: Authenticate with Apple Developer Account
+        env:
+          APP_STORE_CONNECT_API_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
+        run: |
+          echo "${{ secrets.APP_STORE_CONNECT_API_KEY }}" | base64 --decode > AuthKey.p8
+          xcrun altool --upload-app -f $PWD/build/StepRunningCoach.ipa \
+            --type ios \
+            --apiKey $APP_STORE_CONNECT_API_KEY_ID \
+            --apiIssuer $APP_STORE_CONNECT_API_ISSUER_ID \
+            --apiKey AuthKey.p8
+
+
       - name: Build and Archive
         run: |
           xcodebuild -project StepRunningCoach.xcodeproj \
