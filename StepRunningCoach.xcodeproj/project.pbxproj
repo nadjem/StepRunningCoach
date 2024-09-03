@@ -38,9 +38,10 @@
 		DDA23A0F2C8210A6000BA507 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A0C2C8210A6000BA507 /* CircularProgressBarView.swift */; };
 		DDA23A112C82110C000BA507 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A102C82110C000BA507 /* WorkoutManager.swift */; };
 		DDA23A132C821169000BA507 /* Blink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A122C821169000BA507 /* Blink.swift */; };
-		DDA23A152C8215A4000BA507 /* GradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A142C8215A4000BA507 /* GradientExtension.swift */; };
+		DDA23A152C8215A4000BA507 /* GradientExtensionOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A142C8215A4000BA507 /* GradientExtensionOld.swift */; };
 		DDA23A172C82E41C000BA507 /* OHCircleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A162C82E41C000BA507 /* OHCircleSegue.swift */; };
 		DDA23A192C82EB36000BA507 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA23A182C82EB36000BA507 /* DismissSegue.swift */; };
+		DDC623AA2C86F6FD00575705 /* GradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC623A92C86F6FD00575705 /* GradientExtension.swift */; };
 		DDD4BEC32C80FB6200061476 /* BottomHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4BEC22C80FB6200061476 /* BottomHomeViewController.swift */; };
 		DDD4BEC62C80FE8100061476 /* WeekCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4BEC52C80FE8100061476 /* WeekCustomCell.swift */; };
 		DDD4BEC82C8102D900061476 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4BEC72C8102D900061476 /* PagingCollectionViewLayout.swift */; };
@@ -108,9 +109,10 @@
 		DDA23A0C2C8210A6000BA507 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 		DDA23A102C82110C000BA507 /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		DDA23A122C821169000BA507 /* Blink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blink.swift; sourceTree = "<group>"; };
-		DDA23A142C8215A4000BA507 /* GradientExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientExtension.swift; path = "../../../interval Running/interval Running/Extension/GradientExtension.swift"; sourceTree = "<group>"; };
+		DDA23A142C8215A4000BA507 /* GradientExtensionOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientExtensionOld.swift; path = "../../../interval Running/interval Running/Extension/GradientExtensionOld.swift"; sourceTree = "<group>"; };
 		DDA23A162C82E41C000BA507 /* OHCircleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHCircleSegue.swift; sourceTree = "<group>"; };
 		DDA23A182C82EB36000BA507 /* DismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		DDC623A92C86F6FD00575705 /* GradientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtension.swift; sourceTree = "<group>"; };
 		DDD4BEC22C80FB6200061476 /* BottomHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomHomeViewController.swift; sourceTree = "<group>"; };
 		DDD4BEC52C80FE8100061476 /* WeekCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCustomCell.swift; sourceTree = "<group>"; };
 		DDD4BEC72C8102D900061476 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -179,7 +181,6 @@
 				DDD4BEC22C80FB6200061476 /* BottomHomeViewController.swift */,
 				DD65F00F2C818FFF006B0874 /* WeekDetailViewController.swift */,
 				DD9669FF2C81F0440098F968 /* DaysProgramCollectionController.swift */,
-				DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension2.swift */,
 				DDA23A062C820FCE000BA507 /* RunViewController.swift */,
 				DD09D6C82C7BBC1600F0E67B /* Main.storyboard */,
 				DD09D6CB2C7BBC1700F0E67B /* Assets.xcassets */,
@@ -275,7 +276,9 @@
 		DDD7BE032C7E654C00F84DC5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DDA23A142C8215A4000BA507 /* GradientExtension.swift */,
+				DDD7BDFF2C7E1B7400F84DC5 /* GradientExtension2.swift */,
+				DDA23A142C8215A4000BA507 /* GradientExtensionOld.swift */,
+				DDC623A92C86F6FD00575705 /* GradientExtension.swift */,
 				DD9669FD2C81EEF40098F968 /* RoundedCorner.swift */,
 				DDD7BE012C7E5FB800F84DC5 /* Shadow.swift */,
 				DDA23A122C821169000BA507 /* Blink.swift */,
@@ -433,6 +436,7 @@
 				DD09D6C32C7BBC1600F0E67B /* AppDelegate.swift in Sources */,
 				DDD4BEC32C80FB6200061476 /* BottomHomeViewController.swift in Sources */,
 				DDD7BE092C7E710000F84DC5 /* TopHomeViewController.swift in Sources */,
+				DDC623AA2C86F6FD00575705 /* GradientExtension.swift in Sources */,
 				DD09D6D72C7BC66300F0E67B /* CustomTabBarController.swift in Sources */,
 				DD966A002C81F0450098F968 /* DaysProgramCollectionController.swift in Sources */,
 				DDA23A112C82110C000BA507 /* WorkoutManager.swift in Sources */,
@@ -448,7 +452,7 @@
 				DDA23A132C821169000BA507 /* Blink.swift in Sources */,
 				DDA23A172C82E41C000BA507 /* OHCircleSegue.swift in Sources */,
 				DD6C5DAE2C80C0AC00AE65B5 /* Setup.swift in Sources */,
-				DDA23A152C8215A4000BA507 /* GradientExtension.swift in Sources */,
+				DDA23A152C8215A4000BA507 /* GradientExtensionOld.swift in Sources */,
 				DD6C5DAC2C80C01000AE65B5 /* TrainingModels.swift in Sources */,
 				DD9669FC2C81EE430098F968 /* DayCustomCell.swift in Sources */,
 			);
