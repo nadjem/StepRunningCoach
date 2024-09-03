@@ -1,0 +1,56 @@
+name: iOS Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build iOS App
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v2
+        with:
+          xcode-version: '15.2'  # Assurez-vous que la version Xcode correspond à celle utilisée dans votre projet
+
+      - name: Build and Archive
+        run: |
+          xcodebuild -workspace StepRunningCoach.xcodeproj \
+            -scheme StepRunningCoach \
+            -sdk iphoneos \
+            -configuration Release \
+            -archivePath $PWD/build/StepRunningCoach.xcarchive \
+            clean archive
+
+      - name: Export IPA
+        run: |
+          xcodebuild -exportArchive \
+            -archivePath $PWD/build/StepRunningCoach.xcarchive \
+            -exportOptionsPlist ExportOptions.plist \
+            -exportPath $PWD/build
+
+      - name: Upload to TestFlight
+        env:
+          APP_STORE_CONNECT_API_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
+        run: |
+          xcrun altool --upload-app -f $PWD/build/StepRunningCoach.ipa \
+            --type ios \
+            --apiKey $APP_STORE_CONNECT_API_KEY \
+            --apiIssuer $APP_STORE_CONNECT_API_ISSUER_ID \
+            --apiKeyID $APP_STORE_CONNECT_API_KEY_ID
