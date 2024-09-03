@@ -45,7 +45,7 @@ jobs:
 
       - name:  Log    
         if: always()
-        run: echo "/Users/runner/Library/Logs/gym/StepRunningCoach-StepRunningCoach.log"
+        run: cat /Users/runner/Library/Logs/gym/StepRunningCoach-StepRunningCoach.log | less
         
       - name: Saving IPA File
         uses: actions/upload-artifact@v2   
