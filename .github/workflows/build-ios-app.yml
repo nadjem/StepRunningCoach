@@ -38,7 +38,7 @@ jobs:
           scheme: StepRunningCoach
           configuration: Release
           export-method: app-store
-          p12-key-base64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
+          p12-base64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
           mobileprovision-base64: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}
           code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
           team-id: ${{ secrets.TEAM_ID }}
