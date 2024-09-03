@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   build:
@@ -23,9 +20,9 @@ jobs:
           ruby-version: 3.0
 
       - name: Set up Xcode
-        uses: maxim-lobanov/setup-xcode@v1
+        uses: maxim-lobanov/setup-xcode@v2
         with:
-          xcode-version: '15.2'  # Assurez-vous que la version Xcode correspond à celle utilisée dans votre projet
+          xcode-version: '14.0'  # Assurez-vous que la version Xcode correspond à celle utilisée dans votre projet
 
       - name: Build and Archive
         run: |
@@ -40,7 +37,7 @@ jobs:
         run: |
           xcodebuild -exportArchive \
             -archivePath $PWD/build/StepRunningCoach.xcarchive \
-            -exportOptionsPlist Support/ExportOptions.plist \
+            -exportOptionsPlist ExportOptions.plist \
             -exportPath $PWD/build
 
       - name: Upload to TestFlight
