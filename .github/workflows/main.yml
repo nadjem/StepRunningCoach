@@ -23,7 +23,7 @@ jobs:
           ruby-version: 3.0
 
       - name: Set up Xcode
-        uses: maxim-lobanov/setup-xcode@v2
+        uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '15.2'  # Assurez-vous que la version Xcode correspond à celle utilisée dans votre projet
 
@@ -40,7 +40,7 @@ jobs:
         run: |
           xcodebuild -exportArchive \
             -archivePath $PWD/build/StepRunningCoach.xcarchive \
-            -exportOptionsPlist ExportOptions.plist \
+            -exportOptionsPlist Support/ExportOptions.plist \
             -exportPath $PWD/build
 
       - name: Upload to TestFlight
