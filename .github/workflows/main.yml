@@ -41,7 +41,8 @@ jobs:
             -sdk iphoneos \
             -configuration Release \
             -archivePath $PWD/build/StepRunningCoach.xcarchive \
-            clean archive
+            clean archive \
+            -allowProvisioningUpdates
 
       - name: Export IPA
         run: |
