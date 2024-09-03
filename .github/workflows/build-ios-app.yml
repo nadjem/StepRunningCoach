@@ -45,7 +45,7 @@ jobs:
 
       - name:  Log    
         if: always()
-        run: tail -n 10 /Users/runner/Library/Logs/gym/StepRunningCoach-StepRunningCoach.log
+        run: tail -n 11 /Users/runner/Library/Logs/gym/StepRunningCoach-StepRunningCoach.log
         
       - name: Saving IPA File
         uses: actions/upload-artifact@v2   
