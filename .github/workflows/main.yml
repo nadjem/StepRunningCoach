@@ -40,7 +40,7 @@ jobs:
           APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
           APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
         run: |
-          echo "${{ secrets.APP_STORE_CONNECT_API_KEY }}" | base64 --decode > AuthKey.p8
+          echo "${{ secrets.APPSTORE_API_PRIVATE_KEY }}" | base64 --decode > AuthKey.p8
           xcrun altool --upload-app -f $PWD/build/StepRunningCoach.ipa \
             --type ios \
             --apiKey $APP_STORE_CONNECT_API_KEY_ID \
