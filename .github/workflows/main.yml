@@ -23,6 +23,16 @@ jobs:
         uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '15.2'
+          
+      - name: Delete corrupted Package.resolved
+        run: |
+          if [ -f StepRunningCoach.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved ]; then
+            rm StepRunningCoach.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+          fi
+
+      - name: Resolve Swift Package Dependencies
+        run: |
+          xcodebuild -resolvePackageDependencies -project StepRunningCoach.xcodeproj
 
       - name: Build and Archive
         run: |
