@@ -70,9 +70,11 @@ jobs:
             -configuration Release \
             -archivePath $PWD/build/StepRunningCoach.xcarchive \
             clean archive \
-            -allowProvisioningUpdates \ 
+            -allowProvisioningUpdates \
+            CODE_SIGN_IDENTITY="" \
             CODE_SIGN_STYLE="Automatic" \
-
+            PROVISIONING_PROFILE_SPECIFIER=""
+      
       - name: Export IPA
         run: |
           xcodebuild -exportArchive \
