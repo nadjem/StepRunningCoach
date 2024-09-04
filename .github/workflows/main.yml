@@ -34,11 +34,15 @@ jobs:
             rm StepRunningCoach.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
           fi
 
+      - name: Create AuthKey.p8
+        run: |
+          echo "${{ secrets.APPSTORE_API_PRIVATE_KEY }}" > AuthKey.p8    
+
       - name: Setup Fastlane and Authenticate with Apple
         env:
-          APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
-          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
-          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
         run: |
           fastlane match appstore --api_key_path AuthKey.p8
 
@@ -61,9 +65,9 @@ jobs:
 
       - name: Upload to TestFlight
         env:
-          APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
-          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
-          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_API_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
         run: |
           echo "${{ secrets.APP_STORE_CONNECT_API_KEY }}" > AuthKey.p8
           xcrun altool --upload-app -f $PWD/build/StepRunningCoach.ipa \
