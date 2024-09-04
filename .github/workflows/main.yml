@@ -30,9 +30,13 @@ jobs:
             rm StepRunningCoach.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
           fi
 
-      - name: Resolve Swift Package Dependencies
+      - name: Setup Fastlane and Authenticate with Apple
+        env:
+          APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
         run: |
-          xcodebuild -resolvePackageDependencies -project StepRunningCoach.xcodeproj
+          fastlane match appstore --api_key_path AuthKey.p8
 
       - name: Build and Archive
         run: |
