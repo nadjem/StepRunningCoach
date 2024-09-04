@@ -55,6 +55,12 @@ jobs:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}  # Ajout du mot de passe ici
         run: |
           fastlane match appstore --api_key_path AuthKey.json
+
+      - name: List Provisioning Profiles
+        run: |
+          security find-identity -v -p codesigning
+          ls ~/Library/MobileDevice/Provisioning\ Profiles
+
           
       - name: Build and Archive
         run: |
@@ -64,7 +70,8 @@ jobs:
             -configuration Release \
             -archivePath $PWD/build/StepRunningCoach.xcarchive \
             clean archive \
-            -allowProvisioningUpdates
+            -allowProvisioningUpdates \ 
+            CODE_SIGN_STYLE="Automatic" \
 
       - name: Export IPA
         run: |
