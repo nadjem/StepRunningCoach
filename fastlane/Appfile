@@ -1,0 +1,8 @@
+app_identifier("com.nadjem.StepRunningCoach") # The bundle identifier of your app
+apple_id("nadjem@icloud.com") # Your Apple Developer Portal username
+
+itc_team_id("1995338") # App Store Connect Team ID
+team_id("ZBG76PH7D9") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
