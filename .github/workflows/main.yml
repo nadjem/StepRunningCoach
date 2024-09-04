@@ -45,6 +45,7 @@ jobs:
             "key_id": "${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}",
             "issuer_id": "${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}",
             "key": "${{ secrets.APP_STORE_CONNECT_API_KEY }}",
+            "is_key_content_base64": true,
             "in_house": false
           }' > AuthKey.json
 
