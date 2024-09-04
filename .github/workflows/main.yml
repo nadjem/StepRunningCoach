@@ -34,14 +34,20 @@ jobs:
             rm StepRunningCoach.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
           fi
 
-       # Utilisation de la clé API au format JSON
-      - name: Setup Fastlane and Authenticate with Apple
-        env:
-          APP_STORE_CONNECT_API_JSON: ${{ secrets.APP_STORE_CONNECT_API_JSON }}
+       # Créer le fichier JSON proprement
+      - name: Create AuthKey.json
         run: |
-          echo "${{ secrets.APP_STORE_CONNECT_API_JSON }}" > AuthKey.json
-          fastlane match appstore --api_key_path AuthKey.json
+          echo '{
+            "key_id": "${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}",
+            "issuer_id": "${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}",
+            "key": "${{ secrets.APP_STORE_CONNECT_API_KEY }}",
+            "in_house": false
+          }' > AuthKey.json
 
+      - name: Setup Fastlane and Authenticate with Apple
+        run: |
+          fastlane match appstore --api_key_path AuthKey.json
+          
       - name: Build and Archive
         run: |
           xcodebuild -project StepRunningCoach.xcodeproj \
