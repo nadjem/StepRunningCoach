@@ -45,6 +45,8 @@ jobs:
           }' > AuthKey.json
 
       - name: Setup Fastlane and Authenticate with Apple
+        env:
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}  # Ajout du mot de passe ici
         run: |
           fastlane match appstore --api_key_path AuthKey.json
           
