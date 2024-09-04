@@ -33,7 +33,11 @@ jobs:
           if [ -f StepRunningCoach.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved ]; then
             rm StepRunningCoach.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
           fi
-
+          
+      - name: Update OpenSSL
+        run: |
+          brew update && brew upgrade openssl
+          
        # Créer le fichier JSON proprement
       - name: Create AuthKey.json
         run: |
