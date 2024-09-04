@@ -23,7 +23,7 @@ jobs:
         uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '15.2'
-          
+
       - name: Delete corrupted Package.resolved
         run: |
           if [ -f StepRunningCoach.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved ]; then
@@ -33,20 +33,6 @@ jobs:
       - name: Resolve Swift Package Dependencies
         run: |
           xcodebuild -resolvePackageDependencies -project StepRunningCoach.xcodeproj
-
-      - name: Authenticate with Apple Developer Account
-        env:
-          APP_STORE_CONNECT_API_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
-          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
-          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
-        run: |
-          echo "${{ secrets.APPSTORE_API_PRIVATE_KEY }}" | base64 --decode > AuthKey.p8
-          xcrun altool --upload-app -f $PWD/build/StepRunningCoach.ipa \
-            --type ios \
-            --apiKey $APP_STORE_CONNECT_API_KEY_ID \
-            --apiIssuer $APP_STORE_CONNECT_API_ISSUER_ID \
-            --apiKey AuthKey.p8
-
 
       - name: Build and Archive
         run: |
@@ -67,12 +53,13 @@ jobs:
 
       - name: Upload to TestFlight
         env:
-          APP_STORE_CONNECT_API_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
-          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
-          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
+          APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
         run: |
+          echo "${{ secrets.APP_STORE_CONNECT_API_KEY }}" > AuthKey.p8
           xcrun altool --upload-app -f $PWD/build/StepRunningCoach.ipa \
             --type ios \
-            --apiKey $APP_STORE_CONNECT_API_KEY \
+            --apiKey $APP_STORE_CONNECT_API_KEY_ID \
             --apiIssuer $APP_STORE_CONNECT_API_ISSUER_ID \
-            --apiKeyID $APP_STORE_CONNECT_API_KEY_ID
+            --apiKey AuthKey.p8
