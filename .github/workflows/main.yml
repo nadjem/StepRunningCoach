@@ -44,7 +44,7 @@ jobs:
           GIT_PAT: ${{ secrets.GIT_PAT }}  # Le token d'accès personnel pour accéder au dépôt des certificats
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}  # Si vous avez un mot de passe pour le stockage des certificats
         run: |
-          fastlane match appstore --api_key_path AuthKey.json --git_url "https://$GIT_PAT@github.com/username/matchCerts.git"
+          fastlane match appstore --api_key_path AuthKey.json --git_url "https://$GIT_PAT@github.com/username/matchFast.git"
 
       - name: Build and Archive
         run: |
