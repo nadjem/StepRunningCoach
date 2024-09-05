@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:     
+  workflow_dispatch:
 
 jobs:
   build:
@@ -39,7 +39,6 @@ jobs:
         run: |
           brew update && brew upgrade openssl
 
-      # Créer le fichier JSON pour l'authentification avec App Store Connect
       - name: Create AuthKey.json
         run: |
           echo '{
@@ -50,32 +49,23 @@ jobs:
             "in_house": false
           }' > AuthKey.json
 
-      # Configurer fastlane et authentifier l'accès Apple avec signature automatique activée
       - name: Setup Fastlane and Authenticate with Apple
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
         run: |
-          fastlane match appstore --api_key_path AuthKey.json
+          bundle exec fastlane match appstore --api_key_path AuthKey.json
 
-      # Activer la signature automatique via fastlane
-      - name: Enable automatic code signing
-        run: |
-          fastlane sigh resign --signing_identity "iPhone Distribution" --provisioning_profile "match AppStore com.nadjem.StepRunningCoach"
-
-      # Utiliser fastlane gym pour construire et exporter l'IPA
       - name: Build and Export IPA using Fastlane
         run: |
-          fastlane gym --scheme "StepRunningCoach" \
+          bundle exec fastlane gym --scheme "StepRunningCoach" \
             --archive_path "$PWD/build/StepRunningCoach.xcarchive" \
             --export_method "app-store" \
-            --export_options "ExportOptions.plist" \
             --output_directory "$PWD/build" \
             --output_name "StepRunningCoach.ipa" \
             --clean
 
-      # Utiliser fastlane pilot pour uploader l'IPA sur TestFlight
       - name: Upload IPA to TestFlight using Fastlane
         run: |
-          fastlane pilot upload \
+          bundle exec fastlane pilot upload \
             --ipa "$PWD/build/StepRunningCoach.ipa" \
             --api_key_path "AuthKey.json"
