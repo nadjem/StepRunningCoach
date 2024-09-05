@@ -1,4 +1,4 @@
-name: iOS Build and Deploy
+name: iOS Build and Deploy TestFlight
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
 
       - name: Install fastlane
         run: |
-          gem install fastlane    
+          gem install fastlane
 
       - name: Set up Xcode
         uses: maxim-lobanov/setup-xcode@v1
@@ -38,8 +38,8 @@ jobs:
       - name: Update OpenSSL
         run: |
           brew update && brew upgrade openssl
-          
-       # Créer le fichier JSON proprement
+
+      # Créer le fichier JSON pour l'authentification avec App Store Connect
       - name: Create AuthKey.json
         run: |
           echo '{
@@ -50,47 +50,27 @@ jobs:
             "in_house": false
           }' > AuthKey.json
 
+      # Configurer fastlane et authentifier l'accès Apple
       - name: Setup Fastlane and Authenticate with Apple
         env:
-          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}  # Ajout du mot de passe ici
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
         run: |
           fastlane match appstore --api_key_path AuthKey.json
 
-      - name: List Provisioning Profiles
+      # Construire et archiver avec fastlane gym
+      - name: Build and Export IPA using Fastlane
         run: |
-          security find-identity -v -p codesigning
-          ls ~/Library/MobileDevice/Provisioning\ Profiles
+          bundle exec fastlane gym --scheme "StepRunningCoach" \
+            --archive_path "$PWD/build/StepRunningCoach.xcarchive" \
+            --export_method "app-store" \
+            --export_options "ExportOptions.plist" \
+            --output_directory "$PWD/build" \
+            --output_name "StepRunningCoach.ipa" \
+            --clean
 
-          
-      - name: Build and Archive
+      # Utiliser fastlane pilot pour uploader l'IPA sur TestFlight
+      - name: Upload IPA to TestFlight using Fastlane
         run: |
-          xcodebuild -project StepRunningCoach.xcodeproj \
-            -scheme StepRunningCoach \
-            -sdk iphoneos \
-            -configuration Release \
-            -archivePath $PWD/build/StepRunningCoach.xcarchive \
-            clean archive \
-            -allowProvisioningUpdates \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGN_STYLE="Automatic" \
-            PROVISIONING_PROFILE_SPECIFIER=""
-      
-      - name: Export IPA
-        run: |
-          xcodebuild -exportArchive \
-            -archivePath $PWD/build/StepRunningCoach.xcarchive \
-            -exportOptionsPlist ExportOptions.plist \
-            -exportPath $PWD/build
-
-      - name: Upload to TestFlight
-        env:
-          APP_STORE_CONNECT_API_KEY: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
-          APP_STORE_CONNECT_API_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
-          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APPSTORE_API_KEY_ID }}
-        run: |
-          echo "${{ secrets.APP_STORE_CONNECT_API_KEY }}" > AuthKey.p8
-          xcrun altool --upload-app -f $PWD/build/StepRunningCoach.ipa \
-            --type ios \
-            --apiKey $APP_STORE_CONNECT_API_KEY_ID \
-            --apiIssuer $APP_STORE_CONNECT_API_ISSUER_ID \
-            --apiKey AuthKey.p8
+          bundle exec fastlane pilot upload \
+            --ipa "$PWD/build/StepRunningCoach.ipa" \
+            --api_key_path "AuthKey.json"
