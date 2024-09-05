@@ -53,7 +53,7 @@ jobs:
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
         run: |
-          bundle exec fastlane match appstore --api_key_path AuthKey.json
+          bundle exec fastlane match appstore --api_key_path AuthKey.json --readonly
 
       - name: Build and Archive
         run: |
@@ -65,7 +65,7 @@ jobs:
             --clean \
             --codesigning_identity "iPhone Distribution" \
             --allowProvisioningUpdates \
-            --export_options_plist "./ExportOptions.plist"
+            --export_method "app-store"
 
       - name: Upload IPA to TestFlight using Fastlane
         run: |
