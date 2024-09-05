@@ -55,14 +55,17 @@ jobs:
         run: |
           bundle exec fastlane match appstore --api_key_path AuthKey.json
 
-      - name: Build and Export IPA using Fastlane
+      - name: Build and Archive
         run: |
           bundle exec fastlane gym --scheme "StepRunningCoach" \
             --archive_path "$PWD/build/StepRunningCoach.xcarchive" \
             --export_method "app-store" \
             --output_directory "$PWD/build" \
             --output_name "StepRunningCoach.ipa" \
-            --clean
+            --clean \
+            --codesigning_identity "iPhone Distribution" \
+            --allowProvisioningUpdates \
+            --export_options_plist "./ExportOptions.plist"
 
       - name: Upload IPA to TestFlight using Fastlane
         run: |
