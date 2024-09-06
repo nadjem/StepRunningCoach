@@ -10,7 +10,7 @@ jobs:
   build:
     name: Build iOS App
     runs-on: macos-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -20,20 +20,14 @@ jobs:
         with:
           ruby-version: 3.0
 
-      - name: Install fastlane
+      - name: Install Fastlane
         run: |
-          gem install fastlane
+          gem install fastlane    
 
       - name: Set up Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '15.2'
-
-      - name: Delete corrupted Package.resolved
-        run: |
-          if [ -f StepRunningCoach.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved ]; then
-            rm StepRunningCoach.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
-          fi
 
       - name: Create AuthKey.json
         run: |
@@ -45,26 +39,9 @@ jobs:
             "in_house": false
           }' > AuthKey.json
 
-      - name: Setup Fastlane and Authenticate with Apple
+      - name: Run Fastlane to build and upload to TestFlight
         env:
-          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+          GIT_PAT: ${{ secrets.GIT_PAT }}  # Token pour le dépôt Git des certificats
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}  # Mot de passe si nécessaire
         run: |
-          bundle exec fastlane match appstore --api_key_path AuthKey.json
-
-      - name: Build and Archive
-        run: |
-          bundle exec fastlane gym --scheme "StepRunningCoach" \
-            --archive_path "$PWD/build/StepRunningCoach.xcarchive" \
-            --export_method "app-store" \
-            --output_directory "$PWD/build" \
-            --output_name "StepRunningCoach.ipa" \
-            --clean \
-            --codesigning_identity "iPhone Distribution" \
-            --allowProvisioningUpdates \
-            --export_options_plist "./ExportOptions.plist"
-
-      - name: Upload IPA to TestFlight using Fastlane
-        run: |
-          bundle exec fastlane pilot upload \
-            --ipa "$PWD/build/StepRunningCoach.ipa" \
-            --api_key_path "AuthKey.json"
+          fastlane build_and_upload
