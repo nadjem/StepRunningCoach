@@ -6,7 +6,7 @@ platform :ios do
     # Synchroniser les certificats et les profils via match
     match(
       type: "appstore",
-      username: "nadjem@icloud.com",
+      api_key_path: "AuthKey.json",  # Assurez-vous que le fichier AuthKey.json est valide
       git_url: "https://github.com/nadjem/matchFast.git"
     )
 
