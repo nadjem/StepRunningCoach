@@ -26,9 +26,9 @@ jobs:
       - name: Create AuthKey.json
         run: |
           echo '{
-            "key_id": "${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}",
-            "issuer_id": "${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}",
-            "key": "${{ secrets.APP_STORE_CONNECT_API_KEY }}"
+            "key_id": "${{ secrets.APPSTORE_API_KEY_ID }}",
+            "issuer_id": "${{ secrets.APPSTORE_ISSUER_ID }}",
+            "key": "${{ secrets.APPSTORE_API_PRIVATE_KEY }}"
           }' > AuthKey.json
 
       - name: Run Fastlane to build and upload to TestFlight
