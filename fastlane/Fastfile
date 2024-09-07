@@ -1,22 +1,24 @@
-default_platform(:ios)
-
 platform :ios do
-  desc "Build and upload the app to TestFlight"
+  desc "Synchronize certificates and provisioning profiles, build, and upload to TestFlight"
   lane :build_and_upload do
+    # Synchroniser les certificats et les profils via match
+    match(
+      type: "appstore",              # Utiliser "appstore" pour TestFlight et App Store
+      api_key_path: "AuthKey.json",   # Utiliser le fichier API Key JSON pour l'authentification
+      git_url: "https://github.com/nadjem/matchFast.git"
+    )
+
+    # Incrémenter le numéro de build
     increment_build_number(xcodeproj: "StepRunningCoach.xcodeproj")
-    # 1. Synchroniser les certificats et les profils avec match
-    match(type: "appstore", git_url: "https://github.com/nadjem/matchFast.git")
 
-    # 2. Construire l'archive de l'application (gym fait tout le travail avec Fastlane)
+    # Construire l'archive de l'application
     gym(
-      export_method: "app-store",   # Méthode d'exportation pour TestFlight
-      scheme: "StepRunningCoach",            # Remplacez par le nom de votre scheme
-      project: "StepRunningCoach.xcodeproj"
+      export_method: "app-store",     # Utiliser la méthode "app-store" pour TestFlight
+      scheme: "StepRunningCoach"
     )
 
-    # 3. Télécharger l'IPA sur TestFlight
-    pilot(
-      api_key_path: "AuthKey.json"  # Assurez-vous que ce chemin est correct
-    )
+    # Télécharger l'IPA sur TestFlight
+    pilot(api_key_path: "AuthKey.json")
   end
 end
+
