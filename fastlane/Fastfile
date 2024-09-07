@@ -1,3 +1,5 @@
+default_platform(:ios)
+
 platform :ios do
   desc "Synchronize certificates and provisioning profiles, build, and upload to TestFlight"
   lane :build_and_upload do
@@ -21,4 +23,3 @@ platform :ios do
     pilot(api_key_path: "AuthKey.json")
   end
 end
-
