@@ -32,6 +32,9 @@ jobs:
             "key": "${{ secrets.APPSTORE_API_PRIVATE_KEY }}"
           }' > AuthKey.json
 
+      - name: Set Apple ID Password
+        run: echo "FASTLANE_PASSWORD=${{ secrets.MATCH_PASSWORD }}" >> $GITHUB_ENV
+        
       - name: Run Fastlane to build and upload to TestFlight
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}  # Mot de passe pour match si nécessaire
