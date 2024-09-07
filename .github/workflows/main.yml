@@ -36,4 +36,4 @@ jobs:
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}  # Mot de passe pour match si nécessaire
         run: |
-          fastlane build_and_upload
+          bundle exec fastlane build_and_upload
