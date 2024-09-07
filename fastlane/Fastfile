@@ -5,8 +5,8 @@ platform :ios do
   lane :build_and_upload do
     # Synchroniser les certificats et les profils via match
     match(
-      type: "appstore",              # Utiliser "appstore" pour TestFlight et App Store
-      api_key_path: "AuthKey.json",   # Utiliser le fichier API Key JSON pour l'authentification
+      type: "appstore",
+      username: "nadjem@icloud.com",
       git_url: "https://github.com/nadjem/matchFast.git"
     )
 
